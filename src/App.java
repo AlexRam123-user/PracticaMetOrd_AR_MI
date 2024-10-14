@@ -39,7 +39,7 @@ public class App {
 
                 int mEscogido = sc.nextInt();
 
-                //Metodo Burbuja
+                // Metodo Burbuja
                 if (mEscogido == 1) {
                     System.out.println("\nEscoja Ascendente o Descendente");
                     System.out.println("1. Ascendente");
@@ -47,18 +47,52 @@ public class App {
 
                     int opcionOrden = sc.nextInt();
                     System.out.println();
+                    // Metodo Burbuja Ascendente
                     if (opcionOrden == 1) {
-                        System.out.println("Metodo Burbuja (Asc):");
-                        int[] arregloOrdenado = moAsc.sortByBubble(arreglo);
-                        moAsc.printArregloBurAsc(arregloOrdenado);
+                        System.out.println("Quiere ver cada paso: ");
+                        System.out.println("1. Si");
+                        System.out.println("2. No");
+
+                        int oPaso = sc.nextInt();
+
+                        // Procedimiento (Asc)
+                        if (oPaso == 1) {
+                            System.out.println();
+                            int[] arregloOrdenado = moAsc.sortByBubbleProc(arreglo);
+                            System.out.println("\nMetodo Burbuja (Asc):");
+                            moAsc.printArregloBurAsc(arregloOrdenado);
+                        }
+                        // Sin Procedimiento (Asc)
+                        if (oPaso == 2) {
+                            System.out.println("Metodo Burbuja (Asc):");
+                            int[] arregloOrdenado = moAsc.sortByBubble(arreglo);
+                            moAsc.printArregloBurAsc(arregloOrdenado);
+                        }
                     }
+                    // Metodo Burbuja Descendente
                     if (opcionOrden == 2) {
-                        System.out.println("Metodo Burbuja (Des):");
-                        int[] arregloOrdenado = moDes.sortByBubbleDes(arreglo);
-                        moDes.printArregloBurDes(arregloOrdenado);
+                        System.out.println("Quiere ver cada paso: ");
+                        System.out.println("1. Si");
+                        System.out.println("2. No");
+
+                        int oPaso = sc.nextInt();
+
+                        // Procedimiento (Des)
+                        if (oPaso == 1) {
+                            System.out.println();
+                            int[] arregloOrdenado = moDes.sortByBubbleDesProc(arreglo);
+                            System.out.println("\nMetodo Burbuja (Asc):");
+                            moDes.printArregloBurDes(arregloOrdenado);
+                        }
+                        // Sin procedimiento (Des)
+                        if (oPaso == 2) {
+                            System.out.println("Metodo Burbuja (Des):");
+                            int[] arregloOrdenado = moDes.sortByBubbleDes(arreglo);
+                            moDes.printArregloBurDes(arregloOrdenado);
+                        }
                     }
                 }
-                //Metodo Seleccion
+                // Metodo Seleccion
                 if (mEscogido == 2) {
                     System.out.println("\nEscoja Ascendente o Descendente");
                     System.out.println("1. Ascendente");
@@ -67,19 +101,53 @@ public class App {
                     int opcionOrden = sc.nextInt();
                     System.out.println();
 
-                    if(opcionOrden == 1){
-                        System.out.println("Metodo Seleccion (Asc):");
-                        int[] arregloOrdenado = moAsc.sortBySeleccion(arreglo);
-                        moAsc.printArregloSelAsc(arregloOrdenado);
+                    // Metodo Seleccion Ascendente
+                    if (opcionOrden == 1) {
+                        System.out.println("Quiere ver cada paso: ");
+                        System.out.println("1. Si");
+                        System.out.println("2. No");
+
+                        int oPaso = sc.nextInt();
+
+                        // Procedimiento (Asc)
+                        if (oPaso == 1) {
+                            System.out.println();
+                            int[] arregloOrdenado = moAsc.sortBySeleccionProc(arreglo);
+                            System.out.println("\nMetodo Seleccion (Asc):");
+                            moAsc.printArregloSelAsc(arregloOrdenado);
+                        }
+                        // Sin procedimiento (Asc)
+                        if (oPaso == 2) {
+                            System.out.println("Metodo Seleccion (Asc):");
+                            int[] arregloOrdenado = moAsc.sortBySeleccion(arreglo);
+                            moAsc.printArregloSelAsc(arregloOrdenado);
+                        }
                     }
-                    if(opcionOrden == 2){
-                        System.out.println("Metodo Seleccion (Des):");
-                        int[] arregloOrdenado = moDes.sortBySeleccionDes(arreglo);
-                        moDes.printArregloSelDes(arregloOrdenado);
+                    // Metodo Seleccion Descendente
+                    if (opcionOrden == 2) {
+                        System.out.println("Quiere ver cada paso: ");
+                        System.out.println("1. Si");
+                        System.out.println("2. No");
+
+                        int oPaso = sc.nextInt();
+
+                        // Procedimiento (Des)
+                        if (oPaso == 1) {
+                            System.out.println();
+                            int[] arregloOrdenado = moDes.sortBySeleccionDesProc(arreglo);
+                            System.out.println("\nMetodo Seleccion (Asc):");
+                            moDes.printArregloSelDes(arregloOrdenado);
+                        }
+                        // Sin Procedimiento (Des)
+                        if (oPaso == 2) {
+                            System.out.println("Metodo Seleccion (Des):");
+                            int[] arregloOrdenado = moDes.sortBySeleccionDes(arreglo);
+                            moDes.printArregloSelDes(arregloOrdenado);
+                        }
                     }
                 }
-                //Metodo Insercion
-                if(mEscogido == 3){
+                // Metodo Insercion
+                if (mEscogido == 3) {
                     System.out.println("\nEscoja Ascendente o Descendente");
                     System.out.println("1. Ascendente");
                     System.out.println("2. Descendente");
@@ -87,17 +155,53 @@ public class App {
                     int opcionOrden = sc.nextInt();
                     System.out.println();
 
-                    if(opcionOrden == 1){
-                        System.out.println("Metodo Insercion (Asc):");
-                        int[] arregloOrdenado = moAsc.sortInsertion(arreglo);
-                        moAsc.printArregloInsAsc(arregloOrdenado);
-                    }
-                    if(opcionOrden == 2){
+                    // Metodo Insercion Ascendente
+                    if (opcionOrden == 1) {
+                        System.out.println("Quiere ver cada paso: ");
+                        System.out.println("1. Si");
+                        System.out.println("2. No");
 
+                        int oPaso = sc.nextInt();
+
+                        // Procedimiento (Asc)
+                        if (oPaso == 1) {
+                            System.out.println();
+                            int[] arregloOrdenado = moAsc.sortInsertionProc(arreglo, true);
+                            System.out.println("\nMetodo Insercion (Asc):");
+                            moAsc.printArregloInsAsc(arregloOrdenado);
+                        }
+                        // Sin procedimiento (Asc)
+                        if (oPaso == 2) {
+                            System.out.println("Metodo Seleccion (Asc):");
+                            int[] arregloOrdenado = moAsc.sortInsertion(arreglo);
+                            moAsc.printArregloInsAsc(arregloOrdenado);
+                        }
+                    }
+                    // Metodo Insercion Descendente
+                    if (opcionOrden == 2) {
+                        System.out.println("Quiere ver cada paso: ");
+                        System.out.println("1. Si");
+                        System.out.println("2. No");
+
+                        int oPaso = sc.nextInt();
+
+                        // Procedimiento (Des)
+                        if (oPaso == 1) {
+                            System.out.println();
+                            int[] arregloOrdenado = moDes.sortInsertionDesProc(arreglo, true);
+                            System.out.println("\nMetodo Seleccion (Asc):");
+                            moDes.printArregloInsDes(arregloOrdenado);
+                        }
+                        // Sin Procedimiento (Des)
+                        if (oPaso == 2) {
+                            System.out.println("Metodo Seleccion (Des):");
+                            int[] arregloOrdenado = moDes.sortInsertionDes(arreglo);
+                            moDes.printArregloInsDes(arregloOrdenado);
+                        }
                     }
                 }
-                //Metodo Burbuja con Ajuste
-                if(mEscogido == 4){
+                // Metodo Burbuja con Ajuste
+                if (mEscogido == 4) {
                     System.out.println("\nEscoja Ascendente o Descendente");
                     System.out.println("1. Ascendente");
                     System.out.println("2. Descendente");
@@ -105,14 +209,55 @@ public class App {
                     int opcionOrden = sc.nextInt();
                     System.out.println();
 
-                    if(opcionOrden == 1){
-                        System.out.println("Metodo Burbuja con Ajuste (Asc):");
-                        int[] arregloOrdenado = moAsc.BurbujaAjuste(arreglo);
-                        moAsc.printArregloBurAjsteAsc(arregloOrdenado);
-                    }
-                    if(opcionOrden == 2){
+                    // Burbuja con Ajuste Ascendente
+                    if (opcionOrden == 1) {
+                        System.out.println("Quiere ver cada paso: ");
+                        System.out.println("1. Si");
+                        System.out.println("2. No");
+
+                        int oPaso = sc.nextInt();
+
+                        // Procedimiento (Asc)
+                        if (oPaso == 1) {
+                            System.out.println();
+                            int[] arregloOrdenado = moAsc.BurbujaAjusteProc(arreglo);
+                            System.out.println("\nMetodo Burbuja con Ajuste (Asc):");
+                            moAsc.printArregloBurAjsteAsc(arregloOrdenado);
+                        }
+                        // Sin procedimiento (Asc)
+                        if (oPaso == 2) {
+                            System.out.println("Metodo Burbuja con Ajuste (Asc):");
+                            int[] arregloOrdenado = moAsc.BurbujaAjuste(arreglo);
+                            moAsc.printArregloBurAjsteAsc(arregloOrdenado);
+                        }
 
                     }
+                    // Burbuja con Ajuste Descendente
+                    if (opcionOrden == 2) {
+                        System.out.println("Quiere ver cada paso: ");
+                        System.out.println("1. Si");
+                        System.out.println("2. No");
+
+                        int oPaso = sc.nextInt();
+
+                        // Procedimiento (Des)
+                        if (oPaso == 1) {
+                            System.out.println();
+                            int[] arregloOrdenado = moDes.BurbujaAjusteDesProc(arreglo);
+                            System.out.println("\nMetodo Burbuja con Ajuste (Asc):");
+                            moDes.printArregloBurAjsteDes(arregloOrdenado);
+                        }
+                        // Sin Procedimiento (Des)
+                        if (oPaso == 2) {
+                            System.out.println("Metodo Burbuja con Ajuste (Des):");
+                            int[] arregloOrdenado = moDes.BurbujaAjusteDes(arreglo);
+                            moDes.printArregloBurAjsteDes(arregloOrdenado);
+                        }
+                    }
+                }
+                if (mEscogido == 0) {
+                    System.out.println("Saliendo...");
+                    break;
                 }
                 break;
 
@@ -124,7 +269,6 @@ public class App {
                 System.out.println("Opción no válida.");
                 break;
         }
-
         sc.close();
     }
 
